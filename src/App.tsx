@@ -1,7 +1,10 @@
+import { globalStyles } from './styles/global.ts'
+
+globalStyles()
 export function App() {
   return (
     <>
-      <h1>Hello World - New Project</h1>
+      <h2>New Project</h2>
     </>
   )
 }
