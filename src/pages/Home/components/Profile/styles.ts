@@ -34,21 +34,20 @@ export const HeaderProfileContent = styled('header', {
     lineHeight: '130%',
   },
 
-  div: {
+  a: {
+    color: '$blue',
+    fontWeight: 700,
+    textTransform: 'uppercase',
+    fontSize: '0.75rem',
+    lineHeight: '160%',
+    transition: 'color 300ms',
+
     display: 'flex',
-    alignItems: 'start',
+    alignItems: 'center',
     gap: '0.5rem',
 
-    a: {
-      color: '$blue',
-      fontWeight: 700,
-      textTransform: 'uppercase',
-      fontSize: '0.75rem',
-      lineHeight: '160%',
-    },
-
-    svg: {
-      color: '$blue',
+    '&:hover': {
+      color: 'white',
     },
   },
 })

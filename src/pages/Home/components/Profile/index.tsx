@@ -23,11 +23,12 @@ export function Profile() {
         <HeaderProfileContent>
           <h2>Cameron Williamson</h2>
 
-          <div>
-            <a href="#">github</a>
-
+          {/* <div> */}
+          <a href="#">
+            <span>github</span>
             <ArrowSquareOut width={12} height={13} />
-          </div>
+          </a>
+          {/* </div> */}
         </HeaderProfileContent>
 
         <p>
