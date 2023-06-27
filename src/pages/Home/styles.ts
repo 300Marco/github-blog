@@ -1,6 +1,12 @@
 import { styled } from '../../styles'
 import backgroundHeader from '../../assets/background-header.svg'
 
+export const HomeContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+})
+
 export const HeaderContainer = styled('header', {
   backgroundColor: '$profile',
   backgroundImage: `url(${backgroundHeader})`,
