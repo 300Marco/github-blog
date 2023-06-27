@@ -1,4 +1,5 @@
 import logo from '../../assets/logo.svg'
+import { Posts } from './components/Posts'
 
 import { Profile } from './components/Profile'
 import { SearchProfile } from './components/SearchProfile'
@@ -16,9 +17,11 @@ export function Home() {
         </figure>
       </HeaderContainer>
 
-      <Profile />
-
-      <SearchProfile />
+      <main>
+        <Profile />
+        <SearchProfile />
+        <Posts />
+      </main>
     </HomeContainer>
   )
 }
