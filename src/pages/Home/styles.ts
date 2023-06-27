@@ -26,3 +26,15 @@ export const HeaderContainer = styled('header', {
     height: '98px',
   },
 })
+
+export const SrOnly = styled('h1', {
+  position: 'absolute',
+  height: '1px',
+  width: '1px',
+  padding: 0,
+  margin: '-1px',
+  overflow: 'hidden',
+  clipPath: 'rect(0, 0, 0, 0)',
+  whiteSpace: 'nowrap',
+  borderWidth: 0,
+})
