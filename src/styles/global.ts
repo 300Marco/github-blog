@@ -6,6 +6,8 @@ export const globalStyles = globalCss({
     padding: 0,
     border: 'none',
     boxSizing: 'border-box',
+    textDecoration: 'none',
+    listStyle: 'none',
   },
 
   body: {
@@ -16,9 +18,5 @@ export const globalStyles = globalCss({
     fontFamily: "'Nunito', sans-serif",
     fontSize: '1rem',
     color: '$text',
-  },
-
-  a: {
-    textDecoration: 'none',
   },
 })
