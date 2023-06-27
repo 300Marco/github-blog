@@ -1,8 +1,7 @@
-import { GitHub } from '../../../components/icons/GitHub'
-import { Building } from '../../../components/icons/Building'
-import { Followers } from '../../../components/icons/Followers'
-import { ArrowSquareOut } from '../../../components/icons/ArrowSquareOut'
-
+import { ArrowSquareOut } from '../../../../components/icons/ArrowSquareOut'
+import { Building } from '../../../../components/icons/Building'
+import { Followers } from '../../../../components/icons/Followers'
+import { GitHub } from '../../../../components/icons/GitHub'
 import profile from '../../../../assets/profile.png'
 
 import {
