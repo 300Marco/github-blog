@@ -2,6 +2,8 @@ import { styled } from '../../styles'
 import backgroundHeader from '../../assets/background-header.svg'
 
 export const HomeContainer = styled('div', {
+  paddingBottom: '6rem',
+
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
