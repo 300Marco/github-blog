@@ -10,6 +10,11 @@ export const globalStyles = globalCss({
     listStyle: 'none',
   },
 
+  ':focus': {
+    outline: 0,
+    boxShadow: `0 0 0 2px #3a526b`,
+  },
+
   body: {
     backgroundColor: '$background',
   },
