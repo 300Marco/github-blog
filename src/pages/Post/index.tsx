@@ -1,7 +1,12 @@
+import { Content } from './components/Content'
+import { PostInformation } from './components/PostInformation'
+import { PostContainer } from './styles'
+
 export function Post() {
   return (
-    <>
-      <h2>Post</h2>
-    </>
+    <PostContainer>
+      <PostInformation />
+      <Content />
+    </PostContainer>
   )
 }
