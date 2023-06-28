@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+
 import { api } from '../../../../lib/axios'
+import { formatDistanceStrict } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
 
 import { Card, Cards, PostsContainer } from './styles'
 
@@ -27,8 +31,6 @@ export function Posts() {
     fetchIssues()
   }, [])
 
-  console.log(issues)
-
   return (
     <PostsContainer>
       <Cards>
@@ -38,10 +40,23 @@ export function Posts() {
               <header>
                 <h2>{issue.title}</h2>
 
-                <span>{issue.created_at}</span>
+                <span>
+                  Há{' '}
+                  {formatDistanceStrict(
+                    new Date(issue.created_at),
+                    new Date(),
+                    {
+                      locale: ptBR,
+                    },
+                  )}
+                </span>
               </header>
 
-              <p>{issue.body.substring(0, 200) + '...'}</p>
+              <p>
+                <ReactMarkdown>
+                  {issue.body.substring(0, 200) + '...'}
+                </ReactMarkdown>
+              </p>
             </Card>
           )
         })}
