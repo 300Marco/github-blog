@@ -40,14 +40,13 @@ export const HeaderProfileContent = styled('header', {
     textTransform: 'uppercase',
     fontSize: '0.75rem',
     lineHeight: '160%',
-    transition: 'color 300ms',
 
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
 
     '&:hover': {
-      color: 'white',
+      borderBottom: '1px solid $blue',
     },
   },
 })

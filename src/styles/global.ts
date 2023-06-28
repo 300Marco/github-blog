@@ -12,7 +12,7 @@ export const globalStyles = globalCss({
 
   ':focus': {
     outline: 0,
-    boxShadow: `0 0 0 2px #3a526b`,
+    boxShadow: `0 0 0 1px #3194f7`,
   },
 
   body: {

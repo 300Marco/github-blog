@@ -17,10 +17,17 @@ export const Card = styled('div', {
   backgroundColor: '$post',
   borderRadius: '10px',
   padding: '2rem',
+  border: '2px solid transparent',
+  cursor: 'pointer',
+  transition: 'border 300ms',
 
   display: 'flex',
   flexDirection: 'column',
   gap: '1.25rem',
+
+  '&:hover': {
+    border: '2px solid $label',
+  },
 
   header: {
     h2: {

@@ -30,6 +30,7 @@ export const NavigationLinks = styled('nav', {
     fontSize: '0.75rem',
     fontWeight: '700',
     lineHeight: '160%',
+    borderBottom: '1px solid transparent',
     textTransform: 'uppercase',
 
     display: 'flex',
@@ -38,7 +39,7 @@ export const NavigationLinks = styled('nav', {
 
     transition: 'color 300ms',
     '&:hover': {
-      color: 'white',
+      borderBottom: '1px solid $blue',
     },
   },
 })

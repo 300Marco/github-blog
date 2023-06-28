@@ -14,9 +14,14 @@ export const SearchContainer = styled('section', {
     borderRadius: '6px',
     padding: '0.75rem 1rem',
     border: '1px solid $border',
+    transition: 'border 300ms',
 
     '&::placeholder': {
       color: '$label',
+    },
+
+    '&:hover': {
+      border: '1px solid $label',
     },
   },
 })
