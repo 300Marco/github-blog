@@ -1,75 +1,50 @@
+import { useEffect, useState } from 'react'
+import { api } from '../../../../lib/axios'
+
 import { Card, Cards, PostsContainer } from './styles'
 
+interface Issues {
+  number: number
+  title: string
+  created_at: string
+  body: string
+}
+
 export function Posts() {
-  const text = `Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
+  const [issues, setIssues] = useState<Issues[]>([])
 
-    Dynamic typing
-    JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
-    
-    let foo = 42; // foo is now a number
-    foo = 'bar'; // foo is now a string
-    foo = true; // foo is now a boolean
-    `
+  async function fetchIssues() {
+    const response = await api.get('/search/issues', {
+      params: {
+        q: 'repo:300Marco/github-blog',
+      },
+    })
 
-  const textSummaryPreview = text.substring(0, 200) + '...'
+    setIssues(response.data.items)
+  }
+
+  useEffect(() => {
+    fetchIssues()
+  }, [])
+
+  console.log(issues)
 
   return (
     <PostsContainer>
       <Cards>
-        <Card>
-          <header>
-            <h2>JavaScript data types and data structures</h2>
+        {issues.map((issue) => {
+          return (
+            <Card key={issue.number}>
+              <header>
+                <h2>{issue.title}</h2>
 
-            <span>Há 1 dia</span>
-          </header>
+                <span>{issue.created_at}</span>
+              </header>
 
-          <p>{textSummaryPreview}</p>
-        </Card>
-        <Card>
-          <header>
-            <h2>JavaScript data types and data structures</h2>
-
-            <span>Há 1 dia</span>
-          </header>
-
-          <p>{textSummaryPreview}</p>
-        </Card>
-        <Card>
-          <header>
-            <h2>JavaScript data types and data structures</h2>
-
-            <span>Há 1 dia</span>
-          </header>
-
-          <p>{textSummaryPreview}</p>
-        </Card>
-        <Card>
-          <header>
-            <h2>JavaScript data types and data structures</h2>
-
-            <span>Há 1 dia</span>
-          </header>
-
-          <p>{textSummaryPreview}</p>
-        </Card>
-        <Card>
-          <header>
-            <h2>JavaScript data types and data structures</h2>
-
-            <span>Há 1 dia</span>
-          </header>
-
-          <p>{textSummaryPreview}</p>
-        </Card>
-        <Card>
-          <header>
-            <h2>JavaScript data types and data structures</h2>
-
-            <span>Há 1 dia</span>
-          </header>
-
-          <p>{textSummaryPreview}</p>
-        </Card>
+              <p>{issue.body.substring(0, 200) + '...'}</p>
+            </Card>
+          )
+        })}
       </Cards>
     </PostsContainer>
   )
