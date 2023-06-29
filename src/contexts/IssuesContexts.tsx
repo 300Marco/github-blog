@@ -28,6 +28,8 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
     if (query) {
       response = await api.get('/search/issues', {
         params: {
+          sort: 'created',
+          order: 'desc',
           q: `repo:300Marco/github-blog ${query}`,
         },
       })
