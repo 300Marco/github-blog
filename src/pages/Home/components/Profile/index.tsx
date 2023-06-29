@@ -10,27 +10,11 @@ import {
   ProfileContent,
   ProfileStatus,
 } from './styles'
-import { api } from '../../../../lib/axios'
-import { useEffect, useState } from 'react'
-
-interface ProfileData {
-  avatar_url: string
-  name: string
-  bio: string
-  login: string
-  company: string
-  followers: number
-  html_url: string
-}
+import { useContext, useEffect } from 'react'
+import { ProfileContext } from '../../../../contexts/ProfileContexts'
 
 export function Profile() {
-  const [profile, setProfile] = useState<ProfileData>({} as ProfileData)
-
-  async function fetchProfile() {
-    const response = await api.get('/users/300Marco')
-
-    setProfile(response.data)
-  }
+  const { profile, fetchProfile } = useContext(ProfileContext)
 
   useEffect(() => {
     fetchProfile()

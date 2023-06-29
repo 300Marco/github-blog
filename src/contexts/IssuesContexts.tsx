@@ -8,9 +8,20 @@ interface Issues {
   body: string
 }
 
+interface Issue {
+  html_url: string
+  user: { login: string }
+  title: string
+  created_at: string
+  comments: number
+  body: string
+}
+
 interface IssuesContextType {
   issues: Issues[]
+  issue: Issue
   fetchIssues: (query?: string) => Promise<void>
+  fetchIssue: (id: string | undefined) => Promise<void>
 }
 
 export const IssuesContext = createContext({} as IssuesContextType)
@@ -44,12 +55,22 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
     setIssues(response.data.items)
   }
 
+  const [issue, setIssue] = useState<Issue>({} as Issue)
+
+  async function fetchIssue(id: string | undefined) {
+    const response = await api.get(`/repos/300Marco/github-blog/issues/${id}`)
+
+    console.log(response.data)
+
+    setIssue(response.data)
+  }
+
   useEffect(() => {
     fetchIssues()
   }, [])
 
   return (
-    <IssuesContext.Provider value={{ issues, fetchIssues }}>
+    <IssuesContext.Provider value={{ issues, fetchIssues, issue, fetchIssue }}>
       {children}
     </IssuesContext.Provider>
   )
