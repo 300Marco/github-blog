@@ -10,6 +10,7 @@ export const SearchContainer = styled('section', {
   gap: '0.75rem',
 
   input: {
+    width: '100%',
     backgroundColor: '$input',
     borderRadius: '6px',
     padding: '0.75rem 1rem',

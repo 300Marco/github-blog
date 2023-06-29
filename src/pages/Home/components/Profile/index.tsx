@@ -20,6 +20,7 @@ interface ProfileData {
   login: string
   company: string
   followers: number
+  html_url: string
 }
 
 export function Profile() {
@@ -45,7 +46,7 @@ export function Profile() {
         <HeaderProfileContent>
           <h2>{profile.name}</h2>
 
-          <a href="#">
+          <a href={profile.html_url} target="_blank" rel="noreferrer">
             <span>github</span>
             <ArrowSquareOut width={12} height={13} />
           </a>

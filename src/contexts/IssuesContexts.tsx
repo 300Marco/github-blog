@@ -10,6 +10,7 @@ interface Issues {
 
 interface IssuesContextType {
   issues: Issues[]
+  fetchIssues: (query?: string) => Promise<void>
 }
 
 export const IssuesContext = createContext({} as IssuesContextType)
@@ -21,12 +22,22 @@ interface IssuesProviderProps {
 export function IssuesProvider({ children }: IssuesProviderProps) {
   const [issues, setIssues] = useState<Issues[]>([])
 
-  async function fetchIssues() {
-    const response = await api.get('/search/issues', {
-      params: {
-        q: 'repo:300Marco/github-blog',
-      },
-    })
+  async function fetchIssues(query?: string) {
+    let response
+
+    if (query) {
+      response = await api.get('/search/issues', {
+        params: {
+          q: `repo:300Marco/github-blog ${query}`,
+        },
+      })
+    } else {
+      response = await api.get('/search/issues', {
+        params: {
+          q: 'repo:300Marco/github-blog',
+        },
+      })
+    }
 
     setIssues(response.data.items)
   }
@@ -36,7 +47,7 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
   }, [])
 
   return (
-    <IssuesContext.Provider value={{ issues }}>
+    <IssuesContext.Provider value={{ issues, fetchIssues }}>
       {children}
     </IssuesContext.Provider>
   )

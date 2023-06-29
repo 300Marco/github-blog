@@ -1,35 +1,15 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import { api } from '../../../../lib/axios'
 import { formatDistanceStrict } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
 import { Card, Cards, PostsContainer } from './styles'
-
-interface Issues {
-  number: number
-  title: string
-  created_at: string
-  body: string
-}
+import { useContext } from 'react'
+import { IssuesContext } from '../../../../contexts/IssuesContexts'
 
 export function Posts() {
-  const [issues, setIssues] = useState<Issues[]>([])
-
-  async function fetchIssues() {
-    const response = await api.get('/search/issues', {
-      params: {
-        q: 'repo:300Marco/github-blog',
-      },
-    })
-
-    setIssues(response.data.items)
-  }
-
-  useEffect(() => {
-    fetchIssues()
-  }, [])
+  const { issues } = useContext(IssuesContext)
 
   return (
     <PostsContainer>

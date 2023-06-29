@@ -9,7 +9,6 @@ export const PostsContainer = styled('section', {
 export const Cards = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, 416px)',
-  justifyContent: 'center',
   gap: '2rem',
 })
 
