@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from 'react'
+import { ReactNode, createContext, useEffect, useState } from 'react'
 import { api } from '../lib/axios'
 
 interface ProfileData {
@@ -30,6 +30,10 @@ export function ProfileProvider({ children }: ProfileProviderProps) {
 
     setProfile(response.data)
   }
+
+  useEffect(() => {
+    fetchProfile()
+  }, [])
 
   return (
     <ProfileContext.Provider value={{ fetchProfile, profile }}>

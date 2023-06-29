@@ -10,8 +10,8 @@ interface Issues {
 
 interface Issue {
   html_url: string
-  user: { login: string }
   title: string
+  user: { login: string }
   created_at: string
   comments: number
   body: string
@@ -59,8 +59,6 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
 
   async function fetchIssue(id: string | undefined) {
     const response = await api.get(`/repos/300Marco/github-blog/issues/${id}`)
-
-    console.log(response.data)
 
     setIssue(response.data)
   }

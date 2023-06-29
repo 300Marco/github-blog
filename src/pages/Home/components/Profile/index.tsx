@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { ProfileContext } from '../../../../contexts/ProfileContexts'
+
 import { ArrowSquareOut } from '../../../../components/icons/ArrowSquareOut'
 import { Building } from '../../../../components/icons/Building'
 import { Followers } from '../../../../components/icons/Followers'
@@ -10,15 +13,9 @@ import {
   ProfileContent,
   ProfileStatus,
 } from './styles'
-import { useContext, useEffect } from 'react'
-import { ProfileContext } from '../../../../contexts/ProfileContexts'
 
 export function Profile() {
-  const { profile, fetchProfile } = useContext(ProfileContext)
-
-  useEffect(() => {
-    fetchProfile()
-  }, [])
+  const { profile } = useContext(ProfileContext)
 
   return (
     <ProfileContainer>
