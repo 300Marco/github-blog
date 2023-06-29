@@ -13,6 +13,14 @@ export const ProfileContainer = styled('section', {
   gap: '2rem',
 })
 
+export const Avatar = styled('figure', {
+  img: {
+    width: '148px',
+    height: '148px',
+    borderRadius: '8px',
+  },
+})
+
 export const ProfileContent = styled('div', {
   p: {
     lineHeight: '160%',
