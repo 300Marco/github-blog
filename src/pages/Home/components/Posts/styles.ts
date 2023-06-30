@@ -10,9 +10,16 @@ export const Cards = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, 416px)',
   gap: '2rem',
+
+  a: {
+    display: 'block',
+    color: '$blue',
+    fontWeight: '700',
+  },
 })
 
 export const Card = styled('div', {
+  height: '100%',
   backgroundColor: '$post',
   borderRadius: '10px',
   padding: '2rem',
@@ -50,5 +57,6 @@ export const Card = styled('div', {
 
   p: {
     lineHeight: '160%',
+    color: '$text',
   },
 })
