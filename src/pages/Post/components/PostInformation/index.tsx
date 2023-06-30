@@ -13,6 +13,7 @@ import { Comments } from '../../../../components/icons/Comments'
 import { GitHub } from '../../../../components/icons/GitHub'
 
 import { NavigationLinks, PostInformationBox, TitleBoxStatus } from './styles'
+import { NavLink } from 'react-router-dom'
 
 export function PostInformation() {
   const { issue } = useContext(IssuesContext)
@@ -23,10 +24,10 @@ export function PostInformation() {
       <NavigationLinks>
         <ul>
           <li>
-            <a href="#">
+            <NavLink to="/">
               <Back width={12} height={13} />
               voltar
-            </a>
+            </NavLink>
           </li>
 
           <li>

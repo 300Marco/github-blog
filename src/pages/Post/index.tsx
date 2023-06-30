@@ -17,6 +17,8 @@ export function Post() {
       setMounted(true)
       fetchIssue(issueId)
     }
+
+    window.scrollTo(0, 0)
   }, [mounted, fetchIssue, issueId])
 
   return (
