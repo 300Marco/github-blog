@@ -14,7 +14,7 @@ export const ContentContainer = styled('section', {
     backgroundColor: '$post',
     padding: '1rem',
     borderRadius: '8px',
-    margin: '1rem 0',
+    // margin: '1rem 0',
   },
 
   code: {
@@ -31,11 +31,11 @@ export const ContentContainer = styled('section', {
   },
 
   'h2, h3, h4': {
-    marginTop: '2rem',
+    // marginTop: '2rem',
   },
 
   p: {
-    margin: '1rem 0',
+    // margin: '1rem 0',
   },
 
   li: {
