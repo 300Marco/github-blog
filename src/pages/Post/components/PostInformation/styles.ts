@@ -15,6 +15,17 @@ export const PostInformationBox = styled('section', {
     fontSize: '1.5rem',
     marginBottom: '0.75rem',
   },
+
+  '@mobile': {
+    border: '1px solid green',
+
+    textAlign: 'center',
+    padding: '2rem 0.75rem',
+
+    h2: {
+      marginBottom: '1rem',
+    },
+  },
 })
 
 export const NavigationLinks = styled('nav', {
@@ -38,6 +49,7 @@ export const NavigationLinks = styled('nav', {
     gap: '0.5rem',
 
     transition: 'color 300ms',
+
     '&:hover': {
       borderBottom: '1px solid $blue',
     },
@@ -53,5 +65,11 @@ export const TitleBoxStatus = styled('ul', {
     display: 'flex',
     alignItems: 'center',
     gap: '0.5rem',
+  },
+
+  '@mobile': {
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: '1.5rem 2rem',
   },
 })
