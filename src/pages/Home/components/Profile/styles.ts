@@ -11,6 +11,11 @@ export const ProfileContainer = styled('section', {
   display: 'flex',
   alignItems: 'center',
   gap: '2rem',
+
+  '@mobile': {
+    flexDirection: 'column',
+    padding: '2rem 0.75rem',
+  },
 })
 
 export const Avatar = styled('figure', {
@@ -25,6 +30,14 @@ export const ProfileContent = styled('div', {
   p: {
     lineHeight: '160%',
     marginBottom: '1.5rem',
+  },
+
+  '@mobile': {
+    width: '100%',
+
+    p: {
+      textAlign: 'center',
+    },
   },
 })
 
@@ -74,6 +87,13 @@ export const ProfileStatus = styled('section', {
     span: {
       color: '$subtitle',
       lineHeight: '160%',
+    },
+  },
+
+  '@mobile': {
+    ul: {
+      flexWrap: 'wrap',
+      justifyContent: 'center',
     },
   },
 })
