@@ -16,6 +16,10 @@ export const Cards = styled('div', {
     color: '$blue',
     fontWeight: '700',
   },
+
+  '@mobile': {
+    gridTemplateColumns: 'initial',
+  },
 })
 
 export const Card = styled('div', {
@@ -58,5 +62,9 @@ export const Card = styled('div', {
   p: {
     lineHeight: '160%',
     color: '$text',
+  },
+
+  '@mobile': {
+    padding: '2rem 0.75rem',
   },
 })
