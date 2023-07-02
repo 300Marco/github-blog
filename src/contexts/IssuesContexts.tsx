@@ -11,7 +11,6 @@ interface Issues {
 interface Issue {
   html_url: string
   title: string
-  user: { login: string }
   created_at: string
   comments: number
   body: string
