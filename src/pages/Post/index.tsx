@@ -7,9 +7,7 @@ import { IssuesContext } from '../../contexts/IssuesContexts'
 
 export function Post() {
   const { issueId } = useParams()
-
   const { fetchIssue } = useContext(IssuesContext)
-
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {

@@ -67,6 +67,18 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
     fetchIssues()
   }, [])
 
+  // function objectIsEmpty(obj: Issue) {
+  //   if (Object.values(obj).length === 0) {
+  //     return true
+  //   }
+
+  //   return false
+  // }
+
+  // useEffect(() => {
+  //   console.log(objectIsEmpty(issue))
+  // })
+
   return (
     <IssuesContext.Provider value={{ issues, fetchIssues, issue, fetchIssue }}>
       {children}
