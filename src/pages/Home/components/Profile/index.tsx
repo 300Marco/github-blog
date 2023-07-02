@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import { ProfileContext } from '../../../../contexts/ProfileContexts'
 
-import { ArrowSquareOut } from '../../../../components/icons/ArrowSquareOut'
-import { Building } from '../../../../components/icons/Building'
-import { Followers } from '../../../../components/icons/Followers'
-import { GitHub } from '../../../../components/icons/GitHub'
+import { ArrowSquareOut } from '../../../../components/Icons/ArrowSquareOut'
+import { Building } from '../../../../components/Icons/Building'
+import { Followers } from '../../../../components/Icons/Followers'
+import { GitHub } from '../../../../components/Icons/GitHub'
 
 import {
   Avatar,

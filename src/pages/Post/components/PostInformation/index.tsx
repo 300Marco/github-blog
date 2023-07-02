@@ -6,11 +6,11 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { IssuesContext } from '../../../../contexts/IssuesContexts'
 import { ProfileContext } from '../../../../contexts/ProfileContexts'
 
-import { ArrowSquareOut } from '../../../../components/icons/ArrowSquareOut'
-import { Back } from '../../../../components/icons/Back'
-import { Calendar } from '../../../../components/icons/Calendar'
-import { Comments } from '../../../../components/icons/Comments'
-import { GitHub } from '../../../../components/icons/GitHub'
+import { ArrowSquareOut } from '../../../../components/Icons/ArrowSquareOut'
+import { Back } from '../../../../components/Icons/Back'
+import { Calendar } from '../../../../components/Icons/Calendar'
+import { Comments } from '../../../../components/Icons/Comments'
+import { GitHub } from '../../../../components/Icons/GitHub'
 
 import { NavigationLinks, PostInformationBox, TitleBoxStatus } from './styles'
 import { NavLink } from 'react-router-dom'
@@ -25,7 +25,7 @@ export function PostInformation() {
         <ul>
           <li>
             <NavLink to="/">
-              <Back width={12} height={13} />
+              <Back width={12} height={13} fill="#3294F8" />
               voltar
             </NavLink>
           </li>
