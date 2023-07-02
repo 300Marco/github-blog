@@ -17,8 +17,6 @@ export const PostInformationBox = styled('section', {
   },
 
   '@mobile': {
-    border: '1px solid green',
-
     textAlign: 'center',
     padding: '2rem 0.75rem',
 

@@ -14,7 +14,6 @@ export const ContentContainer = styled('section', {
     backgroundColor: '$post',
     padding: '1rem',
     borderRadius: '8px',
-    // margin: '1rem 0',
   },
 
   code: {
@@ -30,16 +29,12 @@ export const ContentContainer = styled('section', {
     fontWeight: '700',
   },
 
-  'h2, h3, h4': {
-    // marginTop: '2rem',
-  },
-
-  p: {
-    // margin: '1rem 0',
-  },
-
   li: {
     listStyle: 'initial',
     marginLeft: '1rem',
+  },
+
+  '@mobile': {
+    padding: '2.5rem 0.75rem',
   },
 })
