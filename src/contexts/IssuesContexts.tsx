@@ -20,6 +20,7 @@ interface Issue {
 interface IssuesContextType {
   issues: Issues[]
   issue: Issue
+  issuesNumberList: number[]
   fetchIssues: (query?: string) => Promise<void>
   fetchIssue: (id: string | undefined) => Promise<void>
 }
@@ -32,6 +33,7 @@ interface IssuesProviderProps {
 
 export function IssuesProvider({ children }: IssuesProviderProps) {
   const [issues, setIssues] = useState<Issues[]>([])
+  const [issuesNumberList, setIssuesNumberList] = useState([])
 
   async function fetchIssues(query?: string) {
     let response
@@ -52,6 +54,9 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
       })
     }
 
+    const tempList = response.data.items.map((item: Issues) => item.number)
+    setIssuesNumberList(tempList)
+
     setIssues(response.data.items)
   }
 
@@ -68,7 +73,9 @@ export function IssuesProvider({ children }: IssuesProviderProps) {
   }, [])
 
   return (
-    <IssuesContext.Provider value={{ issues, fetchIssues, issue, fetchIssue }}>
+    <IssuesContext.Provider
+      value={{ issues, fetchIssues, issue, fetchIssue, issuesNumberList }}
+    >
       {children}
     </IssuesContext.Provider>
   )

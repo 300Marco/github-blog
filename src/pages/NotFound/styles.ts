@@ -34,7 +34,7 @@ export const NotFoundContent = styled('section', {
     fontWeight: '700',
   },
 
-  a: {
+  button: {
     fontSize: '1.125rem',
     borderRadius: '8px',
     fontWeight: '700',
@@ -42,6 +42,7 @@ export const NotFoundContent = styled('section', {
     color: '$title',
     textTransform: 'uppercase',
     padding: '1rem 2rem',
+    cursor: 'pointer',
     transition: 'background 300ms',
 
     '&:hover': {

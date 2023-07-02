@@ -1,7 +1,14 @@
-import { NavLink } from 'react-router-dom'
+import { useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { NotFoundContainer, NotFoundContent, ReturnMessage } from './styles'
 
 export function NotFound() {
+  const navigate = useNavigate()
+
+  const goHome = useCallback(() => {
+    navigate('/')
+  }, [navigate])
+
   return (
     <NotFoundContainer>
       <NotFoundContent>
@@ -17,7 +24,8 @@ export function NotFound() {
           </p>
         </ReturnMessage>
 
-        <NavLink to="/">Retornar para página inicial</NavLink>
+        <button onClick={goHome}>Retornar para página inicial</button>
+        {/* <NavLink to="/">Retornar para página inicial</NavLink> */}
       </NotFoundContent>
     </NotFoundContainer>
   )

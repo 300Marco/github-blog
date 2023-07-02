@@ -1,13 +1,13 @@
-import { useParams } from 'react-router-dom'
+import { useContext, useEffect, useState } from 'react'
+import { Navigate, useParams } from 'react-router-dom'
 import { Content } from './components/Content'
 import { PostInformation } from './components/PostInformation'
-import { PostContainer } from './styles'
-import { useContext, useEffect, useState } from 'react'
 import { IssuesContext } from '../../contexts/IssuesContexts'
+import { PostContainer } from './styles'
 
 export function Post() {
   const { issueId } = useParams()
-  const { fetchIssue } = useContext(IssuesContext)
+  const { fetchIssue, issuesNumberList } = useContext(IssuesContext)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -18,6 +18,14 @@ export function Post() {
 
     window.scrollTo(0, 0)
   }, [mounted, fetchIssue, issueId])
+
+  const convertIssueId = Number(issueId)
+
+  const checkContent = issuesNumberList.includes(convertIssueId)
+
+  if (!checkContent) {
+    return <Navigate to="/not-found" />
+  }
 
   return (
     <PostContainer>
