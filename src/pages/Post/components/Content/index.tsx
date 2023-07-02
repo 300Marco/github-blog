@@ -1,11 +1,29 @@
 import ReactMarkdown from 'react-markdown'
 
 import { ContentContainer } from './styles'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { IssuesContext } from '../../../../contexts/IssuesContexts'
+import { useNavigate } from 'react-router-dom'
 
 export function Content() {
   const { issue } = useContext(IssuesContext)
+  const navigate = useNavigate()
+
+  function objectIsEmpty(obj) {
+    if (Object.values(obj).length === 0) {
+      return true
+    }
+
+    return false
+  }
+
+  useEffect(() => {
+    const issueExists = objectIsEmpty(issue)
+
+    if (issueExists) {
+      navigate('/not-found')
+    }
+  }, [])
 
   return (
     <ContentContainer>

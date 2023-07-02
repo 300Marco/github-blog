@@ -12,9 +12,9 @@ export function Router() {
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="/Post/:issueId" element={<Post />} />
-        <Route path="/not-found" element={<NotFound />} />
       </Route>
-      {/* <Route path="*" element={<NotFound />} /> */}
+      <Route path="/not-found" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
