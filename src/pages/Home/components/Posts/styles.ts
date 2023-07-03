@@ -20,6 +20,10 @@ export const Cards = styled('div', {
   '@mobile': {
     gridTemplateColumns: 'initial',
   },
+
+  '@tablet': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  },
 })
 
 export const Card = styled('div', {
