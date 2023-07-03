@@ -7,6 +7,10 @@ export const NotFoundContainer = styled('main', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+
+  '@mobile': {
+    padding: '1rem 0.75rem',
+  },
 })
 
 export const NotFoundContent = styled('section', {
@@ -47,6 +51,14 @@ export const NotFoundContent = styled('section', {
 
     '&:hover': {
       backgroundColor: '#2182E3',
+    },
+  },
+
+  '@mobile': {
+    textAlign: 'center',
+
+    button: {
+      fontSize: '0.75rem',
     },
   },
 })
