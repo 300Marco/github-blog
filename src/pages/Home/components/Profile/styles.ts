@@ -1,4 +1,16 @@
-import { styled } from '../../../../styles'
+import { keyframes, styled } from '../../../../styles'
+
+const profileAnimation = keyframes({
+  from: {
+    opacity: 0,
+    transform: 'translateY(-50px)',
+  },
+
+  to: {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+})
 
 export const ProfileContainer = styled('section', {
   borderRadius: '10px',
@@ -11,6 +23,9 @@ export const ProfileContainer = styled('section', {
   display: 'flex',
   alignItems: 'center',
   gap: '2rem',
+
+  animation: `${profileAnimation} 300ms ease-out 500ms`,
+  animationFillMode: 'both',
 
   '@mobile': {
     flexDirection: 'column',

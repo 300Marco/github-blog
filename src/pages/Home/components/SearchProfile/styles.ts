@@ -1,4 +1,16 @@
-import { styled } from '../../../../styles'
+import { keyframes, styled } from '../../../../styles'
+
+const searchAnimation = keyframes({
+  from: {
+    opacity: 0,
+    transform: 'translateY(-50px)',
+  },
+
+  to: {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+})
 
 export const SearchContainer = styled('section', {
   width: '100%',
@@ -8,6 +20,9 @@ export const SearchContainer = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   gap: '0.75rem',
+
+  animation: `${searchAnimation} 300ms ease-out 700ms`,
+  animationFillMode: 'both',
 
   input: {
     width: '100%',

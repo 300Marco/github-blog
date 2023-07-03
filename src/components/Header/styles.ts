@@ -1,6 +1,18 @@
 import backgroundHeader from '../../assets/background-header.svg'
 
-import { styled } from '../../styles'
+import { keyframes, styled } from '../../styles'
+
+const logoAnimation = keyframes({
+  from: {
+    opacity: 0,
+    transform: 'translateY(-50px)',
+  },
+
+  to: {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+})
 
 export const HeaderContainer = styled('header', {
   backgroundColor: '$profile',
@@ -19,6 +31,9 @@ export const HeaderContainer = styled('header', {
   img: {
     width: '148px',
     height: '98px',
+
+    animation: `${logoAnimation} 300ms ease-out 300ms`,
+    animationFillMode: 'both',
   },
 })
 

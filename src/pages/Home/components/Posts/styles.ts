@@ -1,9 +1,24 @@
-import { styled } from '../../../../styles'
+import { keyframes, styled } from '../../../../styles'
+
+const postsAnimation = keyframes({
+  from: {
+    opacity: 0,
+    transform: 'translateY(-50px)',
+  },
+
+  to: {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+})
 
 export const PostsContainer = styled('section', {
   width: '100%',
   maxWidth: '864px',
   marginTop: '3rem',
+
+  animation: `${postsAnimation} 300ms ease-out 900ms`,
+  animationFillMode: 'both',
 })
 
 export const Cards = styled('div', {
