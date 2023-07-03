@@ -11,13 +11,18 @@ export const ContentContainer = styled('section', {
   gap: '2rem',
 
   pre: {
+    width: '100%',
+
     backgroundColor: '$post',
     padding: '1rem',
     borderRadius: '8px',
+    overflow: 'hidden',
   },
 
   code: {
     color: 'yellow',
+    width: '100%',
+    wordBreak: 'break-word',
   },
 
   'pre>code': {
