@@ -1,4 +1,16 @@
-import { styled } from '../../../../styles'
+import { keyframes, styled } from '../../../../styles'
+
+const contentAnimation = keyframes({
+  from: {
+    opacity: 0,
+    transform: 'translateY(-50px)',
+  },
+
+  to: {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+})
 
 export const ContentContainer = styled('section', {
   width: '100%',
@@ -9,6 +21,9 @@ export const ContentContainer = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
+
+  animation: `${contentAnimation} 300ms ease-out 700ms`,
+  animationFillMode: 'both',
 
   pre: {
     width: '100%',

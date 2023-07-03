@@ -1,4 +1,16 @@
-import { styled } from '../../../../styles'
+import { keyframes, styled } from '../../../../styles'
+
+const postInfoAnimation = keyframes({
+  from: {
+    opacity: 0,
+    transform: 'translateY(-50px)',
+  },
+
+  to: {
+    opacity: 1,
+    transform: 'translateY(0)',
+  },
+})
 
 export const PostInformationBox = styled('section', {
   borderRadius: '10px',
@@ -7,6 +19,9 @@ export const PostInformationBox = styled('section', {
   backgroundColor: '$profile',
   width: '100%',
   maxWidth: '864px',
+
+  animation: `${postInfoAnimation} 300ms ease-out 500ms`,
+  animationFillMode: 'both',
 
   h2: {
     color: '$title',
