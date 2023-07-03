@@ -6,14 +6,13 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { IssuesContext } from '../../../../contexts/IssuesContexts'
 import { ProfileContext } from '../../../../contexts/ProfileContexts'
 
-import { ArrowSquareOut } from '../../../../components/Icons/ArrowSquareOut'
-import { Back } from '../../../../components/Icons/Back'
-import { Calendar } from '../../../../components/Icons/Calendar'
-import { Comments } from '../../../../components/Icons/Comments'
-import { GitHub } from '../../../../components/Icons/GitHub'
-
 import { NavigationLinks, PostInformationBox, TitleBoxStatus } from './styles'
 import { NavLink } from 'react-router-dom'
+import { Back } from '../../../../components/Icons/Back'
+import { ArrowSquareOut } from '../../../../components/Icons/ArrowSquareOut'
+import { GitHub } from '../../../../components/Icons/GitHub'
+import { Calendar } from '../../../../components/Icons/Calendar'
+import { Comments } from '../../../../components/Icons/Comments'
 
 export function PostInformation() {
   const { issue } = useContext(IssuesContext)
