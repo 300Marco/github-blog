@@ -1,18 +1,16 @@
 import { styled } from '../../styles'
 
 export const ButtonBox = styled('button', {
-  //   border: '1px solid red',
-
   lineHeight: 0,
-  borderRadius: '8px',
+  fontWeight: 700,
   backgroundColor: '$blue',
   color: '$title',
   cursor: 'pointer',
-  visibility: 'hidden',
-  transition: 'all 100ms',
-  padding: '12px 0',
-
-  fontWeight: 700,
+  borderRadius: '8px',
+  border: '1px solid transparent',
+  padding: '12px 12px',
+  transition: 'transform 300ms, border 300ms',
+  transform: 'translateY(52px)',
 
   position: 'fixed',
   bottom: '10px',
@@ -20,17 +18,13 @@ export const ButtonBox = styled('button', {
 
   svg: {
     transform: 'rotate(90deg)',
-    visibility: 'hidden',
+  },
+
+  '&:hover': {
+    border: '1px solid #fff',
   },
 
   '&.scrolled': {
-    visibility: 'visible',
-    padding: '12px 12px',
-
-    svg: {
-      visibility: 'visible',
-      //   width: 'initial',
-      //   height: 'initial',
-    },
+    transform: 'translateY(0)',
   },
 })
