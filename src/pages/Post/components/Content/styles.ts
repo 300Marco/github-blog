@@ -54,6 +54,10 @@ export const ContentContainer = styled('section', {
     marginLeft: '1rem',
   },
 
+  img: {
+    width: '100%',
+  },
+
   '@mobile': {
     padding: '2.5rem 0.75rem',
   },
