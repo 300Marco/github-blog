@@ -25,7 +25,6 @@ export function NotFound() {
         </ReturnMessage>
 
         <button onClick={goHome}>Retornar para página inicial</button>
-        {/* <NavLink to="/">Retornar para página inicial</NavLink> */}
       </NotFoundContent>
     </NotFoundContainer>
   )

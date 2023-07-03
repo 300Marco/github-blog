@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import { Home } from './pages/Home'
 import { Post } from './pages/Post'
@@ -13,7 +13,7 @@ export function Router() {
         <Route path="/Post/:issueId" element={<Post />} />
       </Route>
       <Route path="/not-found" element={<NotFound />} />
-      <Route path="*" element={<Navigate to="/not-found" />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
