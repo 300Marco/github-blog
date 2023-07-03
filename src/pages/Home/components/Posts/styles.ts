@@ -19,6 +19,7 @@ export const Cards = styled('div', {
 
   '@mobile': {
     gridTemplateColumns: 'initial',
+    justifyContent: 'center',
   },
 
   '@tablet': {
@@ -70,5 +71,8 @@ export const Card = styled('div', {
 
   '@mobile': {
     padding: '2rem 0.75rem',
+
+    width: '100%',
+    maxWidth: '416px',
   },
 })
