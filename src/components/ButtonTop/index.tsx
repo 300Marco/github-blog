@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Back } from '../Icons/Back'
+import { Back } from '../icons/Back'
 
 import { ButtonBox } from './styles'
 

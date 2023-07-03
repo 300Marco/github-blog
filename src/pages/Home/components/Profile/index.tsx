@@ -9,10 +9,10 @@ import {
   ProfileStatus,
 } from './styles'
 
-import { ArrowSquareOut } from '../../../../components/Icons/ArrowSquareOut'
-import { GitHub } from '../../../../components/Icons/GitHub'
-import { Building } from '../../../../components/Icons/Building'
-import { Followers } from '../../../../components/Icons/Followers'
+import { ArrowSquareOut } from '../../../../components/icons/ArrowSquareOut'
+import { GitHub } from '../../../../components/icons/GitHub'
+import { Building } from '../../../../components/icons/Building'
+import { Followers } from '../../../../components/icons/Followers'
 
 export function Profile() {
   const { profile } = useContext(ProfileContext)

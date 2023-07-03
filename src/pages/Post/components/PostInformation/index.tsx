@@ -8,11 +8,11 @@ import { ProfileContext } from '../../../../contexts/ProfileContexts'
 
 import { NavigationLinks, PostInformationBox, TitleBoxStatus } from './styles'
 import { NavLink } from 'react-router-dom'
-import { Back } from '../../../../components/Icons/Back'
-import { ArrowSquareOut } from '../../../../components/Icons/ArrowSquareOut'
-import { GitHub } from '../../../../components/Icons/GitHub'
-import { Calendar } from '../../../../components/Icons/Calendar'
-import { Comments } from '../../../../components/Icons/Comments'
+import { Back } from '../../../../components/icons/Back'
+import { ArrowSquareOut } from '../../../../components/icons/ArrowSquareOut'
+import { GitHub } from '../../../../components/icons/GitHub'
+import { Calendar } from '../../../../components/icons/Calendar'
+import { Comments } from '../../../../components/icons/Comments'
 
 export function PostInformation() {
   const { issue } = useContext(IssuesContext)
